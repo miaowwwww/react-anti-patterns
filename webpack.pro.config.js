@@ -13,12 +13,14 @@ module.exports = {
 		main: './src/index.js',
 		vendor: ['react', 'react-dom']
 	},
+	
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/[name][hash:6].js',
 		chunkFilename: 'js/[name][chunkhash:6].js',
-		sourceMapFilename: '[name].map'
+		sourceMapFilename: '[name][hash:6].map'
 	},
+
 	module: {
 		rules: [
 			{
