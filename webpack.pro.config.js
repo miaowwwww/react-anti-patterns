@@ -58,7 +58,11 @@ module.exports = {
 		}),
 		new htmlWebpackPlugin({
 			filename: 'index.html',
-			title: 'anti-patterns-react'
+			title: 'anti-patterns-react',
+			minify: {
+        removeTagWhitespace: true,
+        collapseWhitespace: true
+      }
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
